@@ -28,13 +28,13 @@ export const DashboardComponent: React.FC<DashboardComponentProps> = ({fields}) 
                         return <Box
                             borderWidth='1px'
                             p="1rem"
-                            backgroundColor="whiteAlpha.900"
+                            backgroundColor={field.id === selectedField.id ? "green.500" : "whiteAlpha.900"}
+                            color={field.id === selectedField.id ? "white" : "black"}
                             boxShadow="md"
-                            onClick={() => console.log('Field selected: ', field.id)}
-                            alignItems={"center"}>
+                            onClick={() => console.log('Field selected: ', field.id)}>
                             <Square size='80px' onClick={() => setSelectedField(field)}>
                                 <HStack>
-                                <Text>{field.name}</Text></HStack>
+                                <Text fontSize={"lg"}>{field.name}</Text></HStack>
                             </Square>
                         </Box>
                     })}

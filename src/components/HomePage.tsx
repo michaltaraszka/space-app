@@ -110,7 +110,7 @@ export const HomePage = () => {
     const tabs = [
         {id: 0, name: 'Dashboard', link: '/dashboard'},
         {id: 1, name: 'Knowledge Base', link: '/knowledge-base'},
-        {id: 2, name: 'Additional source', link: '/additional-source'},
+        {id: 2, name: 'Additional sources', link: '/additional-source'},
     ];
 
     const onTabSelect = (tabId: number) => {
